@@ -1,0 +1,285 @@
+Git + Github Part 1
+
+In this section, we're going to talk about Git, GitHub, and source control.
+
+Now you might remember GitHub from our previous section where we used to put the website online
+but I'll show you that it is so much more than that.
+More importantly, getting GitHub is used by most professional companies and it is a skill that is expected to be known by all developers now.
+So this is an important section.
+
+One of the first things most developers have to do on their first day on the job is to meet something called a Pull request which uses Git and GitHub.
+We'll get through that in this section.
+Don't worry you're going to learn all of this and it's going to make sense.
+
+Let's first start with source control.
+Up until now, we have only worked on small files.
+No team members just ourselves.
+Just a couple of files.
+But in real life, you're most likely not the only developer on a team.
+Most likely the projects are huge. There are many many files.
+Source control allows us to make sure that multiple people can work on the same file from different locations.
+Think of it as Google Docs that allows people to collaborate on one document.
+But enough talk. Let's actually check it out.
+
+I have over here set up two folders One's for myself, smanwarulislam (S. M. Anwarul Islam (Raju)) who just started a new job at X company and
+I have Marcy here who has been working at the company for a while and she has project files over here:
+· index.html
+· style.css
+· script.js
+· background_generator_files.png
+
+I'm actually using the files from our background generator (background_generator_files) video (section).
+
+Now without Git or GitHub what I can do is just copy and paste these files so I have whatever Marcy has and we can start working on these files.
+I can have my developer environment here with my terminal and my Sublime Text or Visual Studio Code (VS Code)
+and I can work on whatever changes need to be made to the app
+and Marcy over here also has her own version where she can work on it and we're both working on the same project.
+But let's say that both Marcy and I are working on this project and she decides to change the project name from Gradient Background to Super Background
+and at the same time in my project, I decided to call this Cool Background.
+Well, now you'll have to set up a meeting between myself and Marcy and decide how we should change the code.
+And this is a small example
+but you can imagine that as different programmers worked together there's always going to be this issue of one person changing one thing and another person changing another thing.
+This is where Source Control came in and Source Control is a way to control this where we have one place instead of our own computers.
+In this case, it's just represented by the folder that I (Marcy) have here.
+Instead of each of us having a copy of the project,
+with source control, we have a copy of the project file
+there is a centralized location up somewhere maybe owned by the company or somewhere on the internet that has the ultimate version
+that we each talked about to make sure that we each have the same version
+Getting GitHub is a way to do this to be able to use source control.
+And as a matter of fact, it's the de facto way of doing this.
+Like I said before this is most likely the tool you'll be using every single day at your workplace.
+
+So if I go to the GitHub website here
+https://github.com/
+what it allows us to do is it's a place, a central place that both smanwarulislam (S. M. Anwarul Islam (Raju)) and Marcy can talk to.
+So even though we work on the same files for the same project I can ask for this central location such as GitHub.
+Hey, has Marcy made any changes?
+And Marcy can ask, hey have smanwarulislam (S. M. Anwarul Islam (Raju)) made any changes?
+And every once in a while, you'll get something like this where we have Cool Background and Super Background where we have something called a merge conflict.
+What GitHub allows us to do is say hey, I notice there is a merge conflict.
+I see that you guys have both changed your background.
+I don't know who's right but here's the information.
+smanwarulislam (S. M. Anwarul Islam (Raju)) and Marcy, can you guys talk amongst yourself and figure it out.
+That's pretty much work for me.
+So let's actually see what this looks like.
+
+The first thing we want to do is set up a GitHub account.
+If you haven't done it in the previous exercises, you absolutely should start a GitHub account. It's FREE.
+And like I said before if you're a developer you just need to have it where everybody puts their projects.
+It's where you work you'll be spending a lot of time on this website.
+
+You might remember that when we had the GitHub project, I also told you to get GitHub for the Desktop.
+Git GUI:
+https://desktop.github.com/
+Although we use that to make things simpler during that video (section).
+This is actually not the recommended way of doing it.
+It allows you to visually see and interact with GitHub
+but it's kind of looked down upon by employers and most people use the terminal or the command prompt to actually do it.
+So I won't be teaching you this way just because I think it's bad practice and getting used to the terminal is important.
+I'm going to close that (GitHub Desktop) and we're going to get the start.
+
+The very first thing we're going to do is we're going to click on New repository (Create a new repository).
+And here we're going to call it whatever we want, we'll call it git-github-background-generator.
+And you also want to leave it up as Public and we want to click on Initialize this repository with: Add a README file and we'll click Create repository.
+And what that does.
+Well, we've created a new repository on GitHub.
+And here is the README (README.md) which is just a file that describes your project.
+You can see that it's here, we can type into the README (README.md) whatever we want and it'll describe our project.
+
+But let's go back.
+I'm (smanwarulislam (S. M. Anwarul Islam (Raju))) actually going to remove my files here:
+· index.html
+· style.css
+· script.js
+· background_generator_files.png
+
+If Marcy let's say Marcy has been working at this company for a long time,
+and the employer finally decided hey we need to use GitHub we're going to hire this new guy smanwarulislam (S. M. Anwarul Islam (Raju)).
+We want to make sure that you both can work on it on the project together without any issues.
+Can you put the project up on GitHub?
+So what Marcy will do is she will go to GitHub,
+create git-github-background-generator,
+and then she's going to click right over here to <> Code → Local → Clone.
+And she's going to make sure it says to HTTPS.
+And from here (HTTPS URL) you just click on this button which copies this link to your keyboard.
+
+Then Marcy goes to her terminal, we want to have the project in the G:\Marcy\GitHub\repositories folder.
+So I'll cd into Marcy/GitHub/repositories.
+
+FOR WINDOWS:
+G:\
+λ
+
+G:\
+λ cd Marcy/GitHub/repositories
+
+G:\Marcy\GitHub\repositories
+λ
+
+If I click the dir
+G:\Marcy\GitHub\repositories
+λ dir
+
+Directory of G:\Marcy\GitHub\repositories
+
+06/20/2023  01:01 AM    <DIR>          .
+06/20/2023  01:01 AM    <DIR>          ..
+06/19/2023  10:21 PM             2,177 .gitignore
+09/09/2020  03:39 PM           165,671 background_generator_files.png
+06/20/2023  05:20 PM             7,010 git_github_part_1.txt
+06/20/2023  12:40 PM             1,618 index.html
+06/19/2023  10:21 PM             1,104 LICENSE
+06/19/2023  10:21 PM                69 README.md
+09/23/2022  01:10 AM             5,685 script.js
+09/14/2022  03:30 AM             1,184 style.css
+8 File(s)        184,518 bytes
+2 Dir(s)  44,656,672,768 bytes free
+
+I see that, Yep, I have my files.
+
+Now, the first command that we're going to learn is called git clone, and then copy and paste what we copied from the website.
+G:\Marcy\GitHub\repositories
+λ git clone https://github.com/smanwarulislam/git-github-background-generator.git
+
+We're just saying hey clone this project from github.com
+So I press enter and there you go. Everything is downloaded.
+
+If I go back to the folder (G:\Marcy\GitHub\repositories) now I see that I have git-github-background-generator.
+If I double-click this (git-github-background-generator) you'll see that I have a .git folder here that's actually hidden.
+You might not even see it on your laptop if you don't have this feature on your computer enabled.
+But this .git now allows me to communicate with GitHub.
+
+Now let me show you the next git command.
+
+Marcy right now, If we see, she's in her folder (G:\Marcy\GitHub\repositories)
+G:\Marcy\GitHub\repositories
+λ dir
+
+Directory of G:\Marcy\GitHub\repositories
+
+06/19/2023  10:20 PM    <DIR>          .
+06/19/2023  10:20 PM    <DIR>          ..
+06/20/2023  01:01 AM    <DIR>          git-github-background-generator
+0 File(s)              0 bytes
+3 Dir(s)  44,656,504,832 bytes free
+
+Marcy right now, If we see, she's in her folder (G:\Marcy\GitHub\repositories)
+but now we need to go into git-github-background-generator because if we do any git commands here,
+G:\Marcy\GitHub\repositories
+λ git
+
+well, it won't work because it's not a git project.
+We need to actually go inside the project that was created on GitHub.
+So I'm going to cd into that directory.
+G:\Marcy\GitHub\repositories
+λ cd git-github-background-generator
+
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ
+
+Notice here that I have my terminal set so that it actually shows me what GitHub location I'm in and I'll explain what master (main) means later.
+
+Now that we're here we can look at all our files.
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ dir
+
+Directory of G:\Marcy\GitHub\repositories\git-github-background-generator
+
+06/20/2023  01:01 AM    <DIR>          .
+06/20/2023  01:01 AM    <DIR>          ..
+06/19/2023  10:21 PM             2,177 .gitignore
+09/09/2020  03:39 PM           165,671 background_generator_files.png
+06/20/2023  07:06 PM             9,704 git_github_part_1.txt
+06/20/2023  12:40 PM             1,618 index.html
+06/19/2023  10:21 PM             1,104 LICENSE
+06/19/2023  10:21 PM                69 README.md
+09/23/2022  01:10 AM             5,685 script.js
+09/14/2022  03:30 AM             1,184 style.css
+8 File(s)        187,212 bytes
+2 Dir(s)  44,653,789,184 bytes free
+
+Yep, I see that.
+Now I have my README (README.md) which I created on GitHub. Plus the files that I copied and pasted it.
+
+We need to sync this so that if I go into my git-github-background-generator,
+instead of the README (README.md) files Marcy can put up her files on GitHub
+the way we do that is our second command
+git status
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        background_generator_files.png
+        git_github_part_1.txt
+        index.html
+        script.js
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+It tells us that we have untracked files.
+And it says (use "git add <file>..." to include in what will be committed).
+
+So now that we see the status (git status) of what we have in our folder
+we can say git add and the file name so I can do
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add background_generator_files.png
+
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add index.html
+
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add style.css
+
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add script.js
+
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add git_github_part_1.txt
+
+And now I can do git status again just to see what our status is.
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   background_generator_files.png
+        new file:   git_github_part_1.txt
+        new file:   index.html
+        new file:   script.js
+        new file:   style.css
+
+And now I have
+Your branch is up to date with 'origin/main'.
+Changes to be committed.
+
+You see that now with add we've said hey we want to add these changes.
+We have new files that we've added and say to be committed (Changes to be committed:).
+So the second step is to do something called git commit
+and git commit says hey I'm committing that these are the changes that I want to make to GitHub.
+And it allows you to pass a message so that GitHub will show the message
+when smanwarulislam (S. M. Anwarul Islam (Raju)) comes back in he can say oh Marcy added these files and this is the message.
+And we do that by doing this.
+And here within the double quotes, I can say, adding git-github-background-generator project,
+git commit -m "message"
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git commit -m "adding git-github-background-generator project"
+press enter.
+
+Now there is one last step.
+We've added.
+We did git add to add our changes then git commit to commit and say yeah we're locking in those changes.
+And then finally we need to let github.com know that these are the changes.
+So we do
+git push
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git push
+and there you go, it has now been pushed to this repository.
+
+So if I go back and I refresh (browser tab), look at that it's the same thing that we did when we put up our first website online.
+But instead of using the desktop version of GitHub, we use the command line and now we have our project which is very good.
