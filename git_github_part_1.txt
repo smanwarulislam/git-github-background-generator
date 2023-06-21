@@ -283,3 +283,123 @@ and there you go, it has now been pushed to this repository.
 
 So if I go back and I refresh (browser tab), look at that it's the same thing that we did when we put up our first website online.
 But instead of using the desktop version of GitHub, we use the command line and now we have our project which is very good.
+
+Now let's go back to our example.
+
+So Marcy has been working on this project.
+There's a git repository and I (smanwarulislam (S. M. Anwarul Islam (Raju))) just joined the company and now I need to start working on this.
+What do I do?
+Now I need to access GitHub and get a copy of git-github-background-generator.
+The way I do that well is I go into my folder
+
+FOR WINDOWS:
+G:\
+λ
+
+G:\
+λ cd smanwarulislam/GitHub/repositories
+
+G:\smanwarulislam\GitHub\repositories
+λ
+
+and I do the same thing.
+I do
+git clone
+and then I copy and paste the repository just like before.
+git clone and clone the repo.
+G:\smanwarulislam\GitHub\repositories
+λ git clone https://github.com/smanwarulislam/git-github-background-generator.git
+
+And there you go.
+
+If I (smanwarulislam (S. M. Anwarul Islam (Raju))) go back to my folder, I have git-github-background-generator.
+So we're both working now on git-github-background-generator but not off of each other's files, we're working with whatever version is on GitHub.
+
+All right.
+So now more realistic.
+
+We go back to working and on the first day of my job, I say, I'm going to change the Gradient Background title, actually, the h1 tag to Cool Generator.
+If I save this and I do
+git status
+G:\smanwarulislam\GitHub\repositories
+λ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Well, I'm not in a git repository right now if you remember I have to go into git-github-background-generator.
+Again, these git commands won't work if you're not in a folder that has a .git folder.
+So let me do that, cd into... git-github-background-generator.
+G:\smanwarulislam\GitHub\repositories
+λ cd git-github-background-generator
+
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ
+
+I'm going to say
+git status
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_github_part_1.txt
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+And look at that.
+It tells me that I've modified the index.html and git_github_part_1.txt file.
+And if we remember, I will say,
+git add
+I have two files I can do
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add index.html
+
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add git_github_part_1.txt
+
+But if I wanted, if I had multiple files and I wanted to just commit all of them at once, I can just do the period (.)
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add .
+
+So I'll do that and then git commit and I'll add a message.
+changing title
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git commit -m "changing title"
+I press enter.
+
+And again, I do
+git push
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git push
+and it looks like everything went through.
+
+So let's open that up (browser) and check it out.
+I now refresh here (browser tab),
+and we haven't seen any changes but we now see that we have three commits.
+We have the
+Initial commit,
+the adding git-github-background-generator project
+that Marcy did and it shows you all the files that we're added.
+And if I go back I have the
+changing title commit
+and now I see that yep, smanwarulislam (S. M. Anwarul Islam (Raju)) just changed the Background Generator which is in red to Cool Generator.
+So as you can see we have a history of all the changes and we can always go back if there are any mistakes.
+
+But there's one issue right now.
+If I go back to the code and I go to Marcy's computer, I see that well, she still has Background Generator here.
+Why is that?
+Well, because her computer doesn't know that GitHub has been updated.
+The next command I'm going to show you this is the last one I'm going to show you in this video (section) is
+git pull
+So, remember git push? To push the changes to github.com and git pull to pull whatever's the latest.
+So I do
+git pull
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git pull
+and there you go.
+
+You see over here that it shows me that the index.html file was changed.
+Now you see that my title has been changed to Cool Generator.
