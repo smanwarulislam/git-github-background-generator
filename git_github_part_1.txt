@@ -403,3 +403,62 @@ and there you go.
 
 You see over here that it shows me that the index.html file was changed.
 Now you see that my title has been changed to Cool Generator.
+
+Let's just say that Marcy saw my first change and she really really likes how I've added Cool Generator.
+But I think she wants to make it capitalized,
+Again, she's going to save that.
+She's going to say
+git status
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_github_part_1.txt
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+All right.
+I have my index.html file and git_github_part_1.txt file,
+git add
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git add .
+
+then git commit and I'll add the message,
+capitalize the h1 tag title
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git commit -m "capitalize the h1 tag title"
+
+then
+git push
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git push
+
+There you go. Again, I go back, and I refresh (browser tab).
+And now there are four commits and we see that
+capitalize the h1 tag title
+is the new change.
+
+The first day at work is done.
+I come in the next day at work and well, I want to start with whatever the latest project is of git-github-background-generator.
+And let's say Marcy worked all night to change that title to COOL, capitalize.
+I want to make sure that I have the most updated version.
+So what I do is when I get into work in the morning,
+I'll say, well I want to make sure that if there's any changes that Marcy made I know about them, so I'm going to say
+git pull
+G:\smanwarulislam\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git pull
+
+And notice here how the titles are going to change after I do the pull
+and now I click the Sublime Text or Visual Studio Code (VS Code) and there you go.
+COOL Generator
+
+All right.
+
+In the next video (section),
+we're going to expand on this and show you what happens if both Marcy and smanwarulislam (S. M. Anwarul Islam (Raju)) make the same changes.
+What does GitHub do?
