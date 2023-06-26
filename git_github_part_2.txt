@@ -186,3 +186,70 @@ G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
 λ git pull
 
 and again she has the latest update.
+
+Now let's talk about some conflicts that can arise.
+
+Now let's say Marcy wants to change something and I also change the same thing and we get our merge conflict.
+Let's see what happens.
+
+So let's say Marcy wants to change and create a new feature saying we'll call this one bigfeature and she'll say
+git branch
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git branch bigfeature
+
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ
+
+She'll say
+git checkout bigfeature
+G:\Marcy\GitHub\repositories\git-github-background-generator (main -> origin)
+λ git checkout bigfeature
+Switched to branch 'bigfeature'
+M       git_github_part_2.txt
+
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ
+
+And if I do
+git branch
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git branch
+* bigfeature
+  main
+
+we see that there's a new branch here.
+
+And she'll say here that she wants to change this back to the Background Generator
+because all the users are complaining that the title changed and they liked the old title.
+So she changed that.
+
+and again just
+git status
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git status
+On branch bigfeature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_github_part_2.txt
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+She has done the
+git add,
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git add .
+
+git commit,
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git commit -m "reverting back to the old title"
+
+Perfect.
+
+and then she's gonna do
+git push
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git push
+
+Perfect.
