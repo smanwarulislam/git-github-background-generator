@@ -253,3 +253,52 @@ G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> orig
 λ git push
 
 Perfect.
+
+Now if I go back to the git-github-background-generator repository
+I see the bigfeature pull request over here ("Compare & pull request")
+and just to show you that you can have multiple commits let's say Marcy decides to add an exclamation point here (Background Generator!).
+She can just say again she saves this.
+
+and again just
+git status
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git status
+On branch bigfeature
+Your branch is up to date with 'origin/bigfeature'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git_github_part_2.txt
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+She'll say,
+git add
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git add .
+
+git commit
+and she'll say
+git commit -m "added exclamation"
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git commit -m "added exclamation"
+
+and she'll do
+git push
+again.
+G:\Marcy\GitHub\repositories\git-github-background-generator (bigfeature -> origin)
+λ git push
+
+You do this a lot.
+So you get really really good at Git after working in the company for a while.
+
+And let's go back to GitHub (repository).
+If we look at the pull request ("Compare & pull request")
+they'll actually have both of these
+reverting back to the old title and
+added exclamation
+and we see over here (index.html) both of the changes.
+Create pull request
+Needs changes, smanwarulislam
